@@ -115,11 +115,19 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+
+    header h1{
+        font-size: 22px;
+    }
+
     nav ul {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
     }
     nav ul li {
-        margin: 8px 0;
+        margin: 2px 0;
+        font-size: 14px;
     }
     section {
         margin: 20px;
