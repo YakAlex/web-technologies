@@ -1,13 +1,46 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+<p><a href="../../index.html">Список лабораторних</a></p>
+
+<h2>Форма реєстрації</h2>
+
+<form id="registrationForm" action="https://webhook.site/27906b4f-4361-4ac6-8858-93ccead01a3f" method="post">
+
+    <label for="fname">Ім’я:</label><br>
+    <input type="text" id="fname" name="first_name" required>
+
+    <label for="lname">Прізвище:</label><br>
+    <input type="text" id="lname" name="last_name" required>
+
+    <label for="email">Електронна пошта:</label><br>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Пароль:</label><br>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirm_password">Підтвердження паролю:</label><br>
+    <input type="password" id="confirm_password" name="confirm_password" required><br>
+    <span id="password-error" style="color:red; display:none;">Паролі не співпадають!</span>
+
+    <label for="gender">Стать:</label><br>
+    <select name="gender" id="gender">
+        <option value="">Оберіть стать</option>
+        <option value="male">Чоловіча</option>
+        <option value="female">Жіноча</option>
+        <option value="other">Інше</option>
+    </select><br><br>
+
+    <input type="submit" value="Зареєструватися">
+</form>
 
 </body>
 </html>
