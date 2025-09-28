@@ -22,15 +22,15 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Заголовки */
+
 h2 {
     color: #004080;
     margin-bottom: 20px;
 }
 
-/* Стилі форми */
+
 form {
-    background-color: #cce6ff; /* світло-блакитна форма */
+    background-color: #cce6ff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -65,7 +65,7 @@ select:focus {
     outline: none;
 }
 
-/* Кнопка відправки */
+
 input[type="submit"] {
     background-color: #3399ff;
     color: white;
@@ -81,7 +81,7 @@ input[type="submit"]:hover {
     background-color: #0073e6;
 }
 
-/* Додатково: підлаштовуємо під мобільні екрани */
+
 @media (max-width: 480px) {
     form {
         padding: 20px;
