@@ -1,0 +1,64 @@
+.container ul li:first-child{
+    font-weight: 900;
+}
+
+a:last-child{
+    color: red;
+}
+
+input:disabled{
+    background-color: grey;
+}
+
+input:checked{
+    background-color: lightblue;
+}
+
+div > p{
+    font-weight: 700;
+}
+
+div p {
+    font-size: 16px;
+}
+
+p:first-child {
+    font-size: 24px;
+}
+
+a[href^="https"] {
+    color: green;
+}
+
+input[type="text"] {
+    border: 1px solid blue;
+}
+
+li:first-child,
+li:last-child {
+    font-size: 24px;
+}
+
+li > a {
+    text-decoration: underline;
+}
+
+li:nth-child(even) {
+    font-weight: 900; /* жирний */
+}
+
+input[type="text"]:not(:disabled) {
+    background-color: lightgrey;
+}
+
+.special + li {
+    text-decoration: line-through;
+}
+
+p::first-letter {
+    font-size: 36px;
+}
+
+a::after {
+    content: "↗";
+}
