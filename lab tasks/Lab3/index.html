@@ -1,10 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
 </head>
 <body>
-$END$
-</body>
+
+<header class="header">
+    <div class="header-left">
+        <div class="menu-icon"><i class="ri-menu-fill"></i></div>
+        <div class="logo">
+            <span class="youtube-logo-icon"><i class="ri-youtube-fill"></i></span>
+            <span class="youtube-logo-text">Premium</span>
+            <span class="youtube-logo-country">UA</span>
+        </div>
+    </div>
+    <div class="header-center">
+        <input type="text" placeholder="Пошук" class="search-input">
+        <button class="search-button">
+            <span class="search-icon"><i class="ri-search-line"></i></span>
+        </button>
+    </div>
+    <div class="header-right">
+        <div class="header-icon"><i class="ri-video-add-line"></i></div>
+        <div class="header-icon"><i class="ri-notification-3-fill"></i></div>
+        <button class="sign-in-button">
+            <span class="user-avatar"><i class="ri-user-3-fill"></i></span>
+            <span class="sign-in-text">Увійти</span>
+        </button>
+    </div>
+</header>
+
+<div class="main-container">
+
+    <nav class="sidebar">
+
+        <div class="nav-group primary-nav">
+            <a href="#" class="nav-item nav-active"><span class="nav-icon"><i class="ri-home-2-fill"></i></span> Головна</a>
+            <a href="#" class="nav-item">
+    <span class="nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+            <path clip-rule="evenodd" d="m7.61 15.719.392-.22v-2.24l-.534-.228-.942-.404c-.869-.372-1.4-1.15-1.446-1.974-.047-.823.39-1.642 1.203-2.097h.001L15.13 3.59c1.231-.689 2.785-.27 3.466.833.652 1.058.313 2.452-.879 3.118l-1.327.743-.388.217v2.243l.53.227.942.404c.869.372 1.4 1.15 1.446 1.974.047.823-.39 1.642-1.203 2.097l-.002.001-8.845 4.964-.001.001c-1.231.688-2.784.269-3.465-.834-.652-1.058-.313-2.451.879-3.118l1.327-.742Zm1.993 6.002c-1.905 1.066-4.356.46-5.475-1.355-1.057-1.713-.548-3.89 1.117-5.025a4.14 4.14 0 01.305-.189l1.327-.742-.942-.404a4.055 4.055 0 01-.709-.391c-.963-.666-1.578-1.718-1.644-2.877-.08-1.422.679-2.77 1.968-3.49l8.847-4.966c1.905-1.066 4.356-.46 5.475 1.355 1.057 1.713.548 3.89-1.117 5.025a4.074 4.074 0 01-.305.19l-1.327.742.942.403c.253.109.49.24.709.392.963.666 1.578 1.717 1.644 2.876.08 1.423-.679 2.77-1.968 3.491l-8.847 4.965ZM10 14.567a.25.25 0 00.374.217l4.45-2.567a.25.25 0 000-.433l-4.45-2.567a.25.25 0 00-.374.216v5.134Z" fill-rule="evenodd"></path>
+        </svg>
+    </span>
+                YouTube Shorts
+            </a>
+            <a href="#" class="nav-item"><span class="nav-icon"><i class="ri-music-2-line"></i></span> YouTube Music</a>
+        </div>
+
+        <hr>
+
+        <div class="nav-group your-section">
+            <h3 class="nav-title">Ви <span class="nav-title-icon">❯</span></h3>
+            <a href="#" class="nav-item"><span class="nav-icon"><i class="ri-account-box-line"></i></span> Ваш канал</a>
+            <a href="#" class="nav-item"><span class="nav-icon"><i class="ri-history-line"></i></span> Історія</a>
+            <a href="#" class="nav-item"><span class="nav-icon">▶</span> Ваші відео</a>
+            <a href="#" class="nav-item"><span class="nav-icon"><i class="ri-time-line"></i></span> Переглянути пізніше</a>
+            <a href="#" class="nav-item"><span class="nav-icon"><i class="ri-download-line"></i></span> Завантаження</a>
+            <a href="#" class="nav-item nav-more"><span class="nav-icon"><i class="ri-arrow-down-s-line"></i></span> Показати більше</a>
+        </div>
+
+        <hr>
+
+        <div class="nav-group subscriptions-section">
+            <h3 class="nav-title">Підписки</h3>
+            <a href="#" class="nav-item channel-item"><span class="channel-icon active-status"></span> WAE-Популярні...</a>
+            <a href="#" class="nav-item channel-item"><span class="channel-icon active-status"></span> TheDRiZJ</a>
+            <a href="#" class="nav-item channel-item"><span class="channel-icon live-status"></span> ROZETKA</a>
+            <a href="#" class="nav-item channel-item"><span class="channel-icon active-status"></span> Олексій Макар...</a>
+            <a href="#" class="nav-item channel-item"><span class="channel-icon active-status"></span> ROZETKA GAME...</a>
+            <a href="#" class="nav-item channel-item"><span class="channel-icon live-status"></span> Хіпі</a>
+            <a href="#" class="nav-item channel-item"><span class="channel-icon"></span> Кліп раціона...</a>
+            <a href="#" class="nav-item nav-more"><span class="nav-icon"><i class="ri-arrow-down-s-line"></i></span> Показати ще 24</a>
+        </div>
+
+    </nav>
+
+    <main class="content-area">
+
+        <div class="filter-bar">
+            <button class="filter-button active">Усі</button>
+            <button class="filter-button">Ігри</button>
+            <button class="filter-button">Музика</button>
+            <button class="filter-button">Пряма трансляція</button>
+            <button class="filter-button">Новини</button>
+            <button class="filter-button">Пригодницькі бойовики</button>
+            <button class="filter-button">Образотворче мистецтво</button>
+            <button class="filter-button">Мультфільми</button>
+            <button class="filter-button">Нещодавно завантажені</button>
+            <button class="filter-button next-button">❯</button> <button class="filter-button more-button">Ви дивились</button>
+        </div>
+
+        <div class="videos-grid">
+
+            <div class="video-card">
+                <div class="thumbnail video-1" data-time="48:33"></div>
+                <div class="video-details">
+                    <div class="avatar">
+                        <img src="https://yt3.ggpht.com/YKQGSemkRXSqQevrICUkpq2OTFKpwS6j6CMlEQPGuGNlUGYJnibuWhhDxk_aZn-pHqU6CUM8iQ=s68-c-k-c0x00ffffff-no-rj" alt="СБС">
+                    </div> <div class="text-content">
+                    <h4 class="video-title">ЯК НАВЧАЮТЬ ПІЛОТІВ FPV | СБС Сили безпілотних систем</h4>
+                    <p class="channel-name">СБС: Сили безпілотних систем</p>
+                    <p class="stats">252 тис переглядів • 10 місяців тому</p>
+                </div>
+                    <div class="menu-dots">⋮</div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail video-2" data-time="22:08"></div>
+                <div class="video-details">
+                    <div class="avatar">
+                        <img src="https://yt3.ggpht.com/kGkgr-DiUFOzkdogRPJVFXdE2qee4VsOHlPZm0DmzAwALGDE_ulEOY4hmTgw2l5puUAgqHYHZg=s68-c-k-c0x00ffffff-no-rj" alt="3rd Corpus">
+                    </div>
+                    <div class="text-content">
+                        <h4 class="video-title">Військові Трійки обнулили ворогів, які хотіли їх оточити</h4>
+                        <p class="channel-name">Третій армійський корпус</p>
+                        <p class="stats">1,2 мле переглядів • 5 місяців тому</p>
+                    </div>
+                    <div class="menu-dots">⋮</div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail video-3" data-time="30:44"></div>
+                <div class="video-details">
+                    <div class="avatar">
+                        <img src="https://yt3.ggpht.com/XsqzHh65X3oSg5dmbMrHK2xFm9hci72xjYENPkQNjDUGsHK6HzfLUIK86ZhwJUh6n6JMqpmrTw=s68-c-k-c0x00ffffff-no-rj" alt="СВІТ НАВИВОРІТ">
+                    </div>
+                    <div class="text-content">
+                        <h4 class="video-title">ЕКСКЛЮЗИВНІ КАДРИ! Як українська ППО знищує шахеди?</h4>
+                        <p class="channel-name">СВІТ НАВИВОРІТ</p>
+                        <p class="stats">276 тис. переглядів • 1 день тому</p>
+                    </div>
+                    <div class="menu-dots">⋮</div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail video-4" data-time="34:46"></div>
+                <div class="video-details">
+                    <div class="avatar">
+                        <img src="https://yt3.ggpht.com/n_VMkDrwjaNdGxb3VEkPg4OOajuHWv1hokslrNFKqUMw_fGZW0ECaf4XsH67YX50VfjZeHiq_w=s88-c-k-c0x00ffffff-no-rj" alt="ВІДДУШІВДУШУ">
+                    </div>
+                    <div class="text-content">
+                        <h4 class="video-title">ХАНТ / Кланятись росіянам?я краще 3астр***/ Пережив 18 штурмівD</h4>
+                        <p class="channel-name">ВІДДУШІВДУШУ</p>
+                        <p class="stats">843 тис. переглядів • 7 місяців тому</p>
+                    </div>
+                    <div class="menu-dots">⋮</div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail video-5" data-time="12:33"></div>
+                <div class="video-details">
+                    <div class="avatar">
+                        <img src="https://yt3.ggpht.com/n_VMkDrwjaNdGxb3VEkPg4OOajuHWv1hokslrNFKqUMw_fGZW0ECaf4XsH67YX50VfjZeHiq_w=s68-c-k-c0x00ffffff-no-rj" alt="ВІДДУШІВДУШУ">
+                    </div>
+                    <div class="text-content">
+                        <h4 class="video-title">ГРОМ / Мінуснув однокласника-сєпара при зачистці села</h4>
+                        <p class="channel-name">ВІДДУШІВДУШУ</p>
+                        <p class="stats">377 тис. переглядів • 9 місяців тому</p>
+                    </div>
+                    <div class="menu-dots">⋮</div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail video-6" data-time="2:09:52"></div>
+                <div class="video-details">
+                    <div class="avatar">
+                        <img src="https://yt3.ggpht.com/2ugdZIhwgvgphFpmsZvV_ZdNGEJFxygz0bn7HGbzhlFGG2H3y-t9AcE3wYskJv4nP63C-lCL=s68-c-k-c0x00ffffff-no-rj" alt="Бомбардир">
+                    </div>
+                    <div class="text-content">
+                        <h4 class="video-title">МЕДІА – ЛЮДОЖЕРИ, НАЙБОЄЗДАТНІША АРМІЯ СВІТУ</h4>
+                        <p class="channel-name">Бомбардир</p>
+                        <p class="stats">1,1 млн переглядів • 7 місяців тому</p>
+                    </div>
+                    <div class="menu-dots">⋮</div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail video-7" data-time="16:31"></div>
+                <div class="video-details">
+                    <div class="avatar">
+                        <img src="https://yt3.ggpht.com/petltSX4Pp8TenCgIyelvz0uXxpGjL4ji-N4tJFXMndkWQyi_qXMM_9jBK91ENU0hQGmI3CSSw=s68-c-k-c0x00ffffff-no-rj" alt="24 ОМБр">
+                    </div>
+                    <div class="text-content">
+                        <h4 class="video-title">⚡️ЧАСІВ ЯР. Прильот трьох КАБів потрапив на відео — впало дуже близько!</h4>
+                        <p class="channel-name">24 ОМБр імені короля Данила</p>
+                        <p class="stats">434 тис. переглядів • 6 місяців тому</p>
+                    </div>
+                    <div class="menu-dots">⋮</div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail video-8" data-time="11:30"></div>
+                <div class="video-details">
+                    <div class="avatar">
+                        <img src="https://yt3.ggpht.com/9VP7LmE9Gb3EZTfFtrpF8TRMk8unw132J5_9-m5KhEvfjALiMZYqpmGLj-HCga3hY-Knf8IyIA=s68-c-k-c0x00ffffff-no-rj" alt="ЛЮТЬ">
+                    </div>
+                    <div class="text-content">
+                        <h4 class="video-title">ЯК БІЙЦІ БРИГАДИ ЛЮТЬ ВИХОДИЛИ З ОТОЧЕННЯ | Відео з GoPro</h4>
+                        <p class="channel-name">ЛЮТЬ</p>
+                        <p class="stats">320 тис. переглядів • 5 місяців тому</p>
+                    </div>
+                    <div class="menu-dots">⋮</div>
+                </div>
+            </div>
+
+            <div class="shorts-section-placeholder">
+                <h2 class="shorts-title">
+        <span class="shorts-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                <path clip-rule="evenodd" d="m7.61 15.719.392-.22v-2.24l-.534-.228-.942-.404c-.869-.372-1.4-1.15-1.446-1.974-.047-.823.39-1.642 1.203-2.097h.001L15.13 3.59c1.231-.689 2.785-.27 3.466.833.652 1.058.313 2.452-.879 3.118l-1.327.743-.388.217v2.243l.53.227.942.404c.869.372 1.4 1.15 1.446 1.974.047.823-.39 1.642-1.203 2.097l-.002.001-8.845 4.964-.001.001c-1.231.688-2.784.269-3.465-.834-.652-1.058-.313-2.451.879-3.118l1.327-.742Zm1.993 6.002c-1.905 1.066-4.356.46-5.475-1.355-1.057-1.713-.548-3.89 1.117-5.025a4.14 4.14 0 01.305-.189l1.327-.742-.942-.404a4.055 4.055 0 01-.709-.391c-.963-.666-1.578-1.718-1.644-2.877-.08-1.422.679-2.77 1.968-3.49l8.847-4.966c1.905-1.066 4.356-.46 5.475 1.355 1.057 1.713.548 3.89-1.117 5.025a4.074 4.074 0 01-.305.19l-1.327.742.942.403c.253.109.49.24.709.392.963.666 1.578 1.717 1.644 2.876.08 1.423-.679 2.77-1.968 3.491l-8.847 4.965ZM10 14.567a.25.25 0 00.374.217l4.45-2.567a.25.25 0 000-.433l-4.45-2.567a.25.25 0 00-.374.216v5.134Z" fill-rule="evenodd"></path>
+            </svg>
+        </span>
+                    YouTube Shorts
+                </h2>
+                <p class="shorts-hint">[Тут буде сітка Shorts]</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</div> </body>
 </html>
