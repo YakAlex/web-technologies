@@ -1,36 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ==================================== */
-     /* 1. БАЗОВІ СТИЛІ ТА СКИДАННЯ */
-     /* ==================================== */
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     font-family: "Roboto", sans-serif;
- }
+/* 1. БАЗОВІ СТИЛІ ТА СКИДАННЯ */
+/* ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
 
 body {
     background-color: #f9f9f9;
     color: #0f0f0f;
     line-height: 1.5;
-    overflow-x: hidden; /* Запобігаємо горизонтальній прокрутці */
+    overflow-x: hidden;
 }
 
-/* Стилізація скролбару для ВСЬОГО ТІЛА сторінки */
 body::-webkit-scrollbar {
-    width: 8px; /* Трохи ширше, ніж на бічній панелі */
+    width: 8px;
 }
 
 body::-webkit-scrollbar-thumb {
-    /* Робимо його одразу сірим, оскільки він має бути завжди видимим */
     background-color: #c1c1c1;
     border-radius: 10px;
-    /*border: 2px solid #f9f9f9; !* Додаємо невеликий відступ від краю *!*/
 }
 
 body::-webkit-scrollbar-track {
-    background: #f9f9f9; /* Колір фону сторінки */
+    background: #f9f9f9;
 }
 
 a {
@@ -61,7 +58,6 @@ hr {
     z-index: 1000;
 }
 
-/* Логотип та ліва частина */
 .header-left {
     display: flex;
     align-items: center;
@@ -74,14 +70,13 @@ hr {
     cursor: pointer;
     margin-right: 15px;
     color: #606060;
-
 }
 
 .logo {
     display: flex;
     align-items: center;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
     position: relative;
 }
 
@@ -103,7 +98,6 @@ hr {
     margin-left: 2px;}
 
 
-/* Пошукова панель (Центр) */
 .header-center {
     display: flex;
     flex-grow: 1;
@@ -122,7 +116,6 @@ hr {
     padding-left: 15px;
 }
 
-/* Стилізація фокусу для імітації синьої рамки */
 .search-input:focus {
     border-color: #065fd4;
 }
@@ -135,14 +128,13 @@ hr {
     cursor: pointer;
     font-size: 16px;
     color: #0f0f0f;
-    width: 60px; /* Фіксована ширина кнопки пошуку */
+    width: 60px;
 }
 
 .search-button:hover {
     background-color: #f0f0f0;
 }
 
-/* Права частина */
 .header-right {
     display: flex;
     align-items: center;
@@ -204,10 +196,9 @@ hr {
     height: calc(100vh - 56px);
     overflow-y: auto;
     border-right: 1px solid #f0f0f0;
-    flex-shrink: 0; /* Щоб сайдбар не стискався */
+    flex-shrink: 0;
 }
 
-/* Стилізація скролбару, щоб виглядав схоже */
 .sidebar::-webkit-scrollbar {
     width: 8px;
 }
@@ -266,7 +257,6 @@ hr {
     color: #606060;
 }
 
-/* Активний пункт меню "Головна" */
 .nav-active {
     background-color: #f2f2f2;
     font-weight: 500;
@@ -279,7 +269,6 @@ hr {
 }
 
 .nav-more .nav-icon {
-    /* Іконка "Показати більше" сіра, як на скріншоті */
     color: #606060;
 }
 
@@ -289,18 +278,24 @@ hr {
 }
 
 .channel-icon {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: transparent;
     margin-right: 15px;
-    margin-left: 4px; /* Корегуємо відступ */
+    margin-left: 4px;
     position: relative;
     display: block;
     flex-shrink: 0;
+    overflow: hidden;
 }
 
-/* Імітація зеленої точки "Активний" */
+.channel-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .active-status::after {
     content: '';
     position: absolute;
@@ -313,7 +308,6 @@ hr {
     border: 1px solid #fff;
 }
 
-/* Імітація червоної точки "LIVE" */
 .live-status {
     background-color: #ff0000;
 }
@@ -325,7 +319,6 @@ hr {
     flex-grow: 1;
     padding-top: 20px;
     padding-left: 20px;
-    /* Забезпечуємо відступ справа для кращого вигляду */
     padding-right: 20px;
 }
 
@@ -335,15 +328,15 @@ hr {
     align-items: center;
     height: 56px;
     position: sticky;
-    top: 56px; /* Під шапкою */
+    top: 56px;
     background-color: #f9f9f9;
     z-index: 500;
     margin-bottom: 20px;
-    overflow-x: hidden; /* Скриваємо прокрутку, але зберігаємо вигляд */
+    overflow-x: hidden;
 }
 
 .filter-button {
-    white-space: nowrap; /* Важливо для вкладок */
+    white-space: nowrap;
     padding: 8px 12px;
     margin-right: 12px;
     border-radius: 8px;
@@ -373,7 +366,7 @@ hr {
     font-size: 18px;
     padding: 8px;
     margin-right: 0;
-    box-shadow: -10px 0 10px #f9f9f9; /* Імітуємо градієнт-заглушку */
+    box-shadow: -10px 0 10px #f9f9f9;
 }
 
 .more-button {
@@ -385,11 +378,9 @@ hr {
 
 /* Сітка відео (GRID) */
 .videos-grid {
-    /* Використовуємо CSS Grid для створення сітки відео */
     display: grid;
-    /* Створюємо 4 стовпці, що автоматично підлаштовуються */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px 16px; /* Вертикальний та горизонтальний відступ */
+    gap: 40px 16px;
     padding-bottom: 50px;
 }
 
@@ -447,10 +438,9 @@ hr {
     background-position: center;
 }
 
-/* Прев'ю відео */
 .thumbnail {
     width: 100%;
-    padding-top: 56.25%; /* Співвідношення сторін 16:9 */
+    padding-top: 56.25%;
     background-color: transparent;
     border-radius: 12px;
     position: relative;
@@ -459,7 +449,6 @@ hr {
     flex-shrink: 0;
 }
 
-/* Час відео (використовуємо атрибут data-time) */
 .thumbnail::after {
     content: attr(data-time);
     position: absolute;
@@ -473,7 +462,6 @@ hr {
     font-weight: 500;
 }
 
-/* Деталі відео */
 .video-details {
     display: flex;
     align-items: flex-start;
@@ -485,7 +473,7 @@ hr {
     height: 36px;
     border-radius: 50%;
     margin-right: 12px;
-    flex-shrink: 0; /* Щоб аватар не стискався */
+    flex-shrink: 0;
     overflow: hidden;
 }
 
@@ -504,7 +492,6 @@ hr {
     font-weight: 500;
     line-height: 1.4;
     margin-bottom: 5px;
-    /* Обмеження тексту двома рядками */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -518,7 +505,7 @@ hr {
 }
 
 .channel-name {
-    margin-top: 8px; /* Невеликий відступ від заголовка, як на скріншоті */
+    margin-top: 8px;
 }
 
 .stats {
@@ -536,18 +523,18 @@ hr {
 
 /* Стилі для розділу Shorts */
 .shorts-section-placeholder {
-    grid-column: 1 / -1; /* Займає всю ширину сітки */
+    grid-column: 1 / -1;
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 4px solid #f0f0f0; /* Імітація товстого роздільника */
+    border-top: 4px solid #f0f0f0;
 }
 
- .shorts-icon {
-     width: 24px; /* Задаємо розмір SVG */
-     height: 24px;
-     margin-right: 8px; /* Відступ між іконкою та текстом */
-     color: #ff0000; /* Червоний колір для іконки Shorts */
- }
+.shorts-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    color: #ff0000;
+}
 
 .shorts-title {
     font-size: 20px;
@@ -558,63 +545,145 @@ hr {
     align-items: center;
 }
 
-.shorts-hint {
-    color: #606060;
-}
+/* ==================================== */
+/* 6. АДАПТАЦІЯ: МОБІЛЬНІ ПРИСТРОЇ (<= 768px) */
+/* ==================================== */
+@media (max-width: 768px) {
 
-/* ==================================== */
-/* 6. МЕДІА-ЗАПИТИ (ДЛЯ ІДЕАЛЬНОГО ВИГЛЯДУ) */
-/* ==================================== */
-@media (max-width: 1300px) {
-    /* Зменшуємо максимальну ширину пошуку на великих екранах */
+    /* --- 6.1. HEADER (Шапка) --- */
+    .header {
+        height: 50px;
+        padding: 0 10px;
+    }
+
     .header-center {
-        max-width: 500px;
+        display: none;
     }
-}
+    .youtube-logo-text, .youtube-logo-country, .premium-badge {
+        display: none;
+    }
 
-@media (max-width: 1000px) {
-    /* Приховуємо саббар на середніх екранах */
+    .header-right {
+        min-width: unset;
+        justify-content: flex-end;
+    }
+
+    .search-icon-mobile {
+        display: block;
+        font-size: 22px;
+        color: #606060;
+        padding: 4px;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+
+    .header-icon {
+        font-size: 22px;
+        padding: 4px;
+        margin-left: 5px;
+    }
+    .sign-in-text {
+        display: none;
+    }
+    .sign-in-button {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        margin-left: 5px;
+    }
+    .user-avatar {
+        font-size: 22px;
+        color: #606060;
+    }
+
+
+    /* --- 6.2. SIDEBAR (Бічна панель) --- */
     .sidebar {
-        width: 72px; /* Ширина згорнутого сайдбара */
+        width: 0;
+        padding: 0;
+        border-right: none;
+        overflow: hidden;
+    }
+
+    /* --- 6.3. CONTENT AREA та GRID --- */
+
+    .content-area {
         padding: 0;
     }
-    .nav-group, .nav-title, .nav-item {
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+        gap: 15px 0;
         padding: 0;
-        justify-content: center;
-        text-align: center;
     }
-    .nav-title, .nav-more, .channel-item {
-        /* Приховуємо більшість тексту при згорнутому сайдбарі */
+
+    .video-card {
+        width: 100%;
+        padding: 0 0 15px 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .thumbnail {
+        border-radius: 0;
+        margin-bottom: 8px;
+    }
+
+    .video-details {
+        padding: 0 10px;
+        align-items: flex-start;
+    }
+
+    .avatar {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        margin-top: 2px;
+    }
+
+    .video-title {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .channel-name {
+        margin-top: 2px;
+    }
+
+    .stats {
         display: none;
     }
-    .nav-item {
-        flex-direction: column;
-        height: 74px; /* Збільшуємо висоту для іконки+тексту */
-    }
-    .nav-icon {
-        width: auto;
-        margin-right: 0;
-        margin-bottom: 5px;
+
+    .menu-dots {
+        display: none;
     }
 
-    /* Відновлюємо текст для важливих пунктів */
-    .nav-item::after {
-        content: attr(class);
-        font-size: 10px;
-        color: #0f0f0f;
-        white-space: nowrap;
+    .shorts-section-placeholder {
+        padding: 0 10px;
     }
-    .nav-active::after { content: 'Головна'; }
-    .nav-item:nth-child(2)::after { content: 'Shorts'; }
-    .nav-item:nth-child(3)::after { content: 'Music'; }
 
-    /* Спеціальний стиль для іконок */
-    .nav-active .nav-icon {
-        color: #ff0000; /* Імітуємо червону іконку Головна */
+    /* --- 6.4. Фільтри (Horizontal Scroll) --- */
+
+    .filter-bar {
+        position: sticky;
+        top: 50px;
+        padding: 0 10px;
+        overflow-x: scroll;
+        height: 40px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
-    .nav-item .channel-icon {
-        /* Приховуємо аватари каналів при згорнутому сайдбарі */
+
+    .filter-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-button {
+        padding: 6px 10px;
+        font-size: 13px;
+        margin-right: 8px;
+    }
+
+    .next-button, .more-button {
         display: none;
     }
 }
-
