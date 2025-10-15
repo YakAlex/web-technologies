@@ -15,19 +15,27 @@ body {
     color: #0f0f0f;
     line-height: 1.5;
     overflow-x: hidden;
+    transition: ease-in-out 250ms;
 }
 
+
+
 body::-webkit-scrollbar {
-    width: 8px;
+    width: 12px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #c1c1c1;
-    border-radius: 10px;
+    background-color: #606060;
+    border-radius: 999px;
+    border: 3px solid #606060;
+    background-clip: padding-box;
+    border-top-width: 15px;
+    border-bottom-width: 15px;
 }
 
 body::-webkit-scrollbar-track {
-    background: #f9f9f9;
+    background: transparent;
+    border-radius: 999px;
 }
 
 a {
@@ -40,6 +48,11 @@ hr {
     height: 1px;
     background: #e5e5e5;
     margin: 10px 0;
+    transition: ease-in-out 250ms;
+}
+
+hr.active{
+    background: #3f3f3f;
 }
 
 /* ==================================== */
@@ -56,7 +69,10 @@ hr {
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: ease-in-out 250ms;
 }
+
+
 
 .header-left {
     display: flex;
@@ -114,6 +130,16 @@ hr {
     font-size: 16px;
     outline: none;
     padding-left: 15px;
+    transition: ease-in-out 250ms;
+}
+
+.search-input.active{
+    background-color: #121212;
+    border-color: #303030;
+}
+
+.search-icon.active{
+    color: #ffffff;
 }
 
 .search-input:focus {
@@ -129,10 +155,47 @@ hr {
     font-size: 16px;
     color: #0f0f0f;
     width: 60px;
+    transition: ease-in-out 250ms;
 }
 
-.search-button:hover {
-    background-color: #f0f0f0;
+.search-button.active{
+    background-color: #222222;
+    border-color: #303030;
+}
+
+
+.change-color{
+    all: unset;
+    width: 52px;
+    height: 22px;
+    background-color: #000000;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+}
+
+.change-color::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    transition: transform 300ms ease-in-out;
+}
+
+.change-color.active{
+    background-color: #ffffff;
+}
+
+.change-color.active::before {
+    transform: translateX(27px);
+    background-color: #000000;
 }
 
 .header-right {
@@ -197,6 +260,7 @@ hr {
     overflow-y: auto;
     border-right: 1px solid #f0f0f0;
     flex-shrink: 0;
+    transition: ease-in-out 250ms;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -210,6 +274,7 @@ hr {
 
 .sidebar:hover::-webkit-scrollbar-thumb {
     background-color: #a8a8a8;
+    border-radius: 20px;
 }
 
 
@@ -229,7 +294,7 @@ hr {
 .nav-title-icon {
     margin-left: 5px;
     font-size: 12px;
-    color: #606060;
+    color: #000000;
     font-weight: 700;
 }
 
@@ -249,6 +314,10 @@ hr {
     background-color: #f2f2f2;
 }
 
+.nav-item.active:hover{
+    background-color: #606060;
+}
+
 .nav-icon {
     font-size: 20px;
     width: 30px;
@@ -261,6 +330,7 @@ hr {
     background-color: #f2f2f2;
     font-weight: 500;
     color: #0f0f0f;
+    transition: ease-in-out 250ms;
 }
 
 .nav-active .nav-icon {
@@ -296,18 +366,6 @@ hr {
     object-fit: cover;
 }
 
-.active-status::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 6px;
-    height: 6px;
-    background-color: #10cc00;
-    border-radius: 50%;
-    border: 1px solid #fff;
-}
-
 .live-status {
     background-color: #ff0000;
 }
@@ -333,6 +391,7 @@ hr {
     z-index: 500;
     margin-bottom: 20px;
     overflow-x: hidden;
+    transition: ease-in-out 250ms;
 }
 
 .filter-button {
@@ -345,18 +404,40 @@ hr {
     color: #0f0f0f;
     font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: ease-in-out 250ms;
 }
 
 .filter-button:hover:not(.active) {
     background-color: #f0f0f0;
+
 }
 
 .filter-button.active {
     background-color: #0f0f0f;
     color: #fff;
     border-color: #0f0f0f;
+    transition: ease-in-out 250ms;
 }
+
+.filter-button.dark-mode{
+    background-color: #272727;
+    color: #fff;
+    border-color: #272727;
+    transition: ease-in-out 250ms;
+}
+
+.filter-button.dark-mode:hover {
+    background-color: #808080;
+}
+
+.filter-button.active.dark-mode{
+    background-color: #fff;
+    color: #0f0f0f;
+}
+
+/*.filter-button:hover:not(.active.dark-mode) {*/
+/*    background-color: #f0f0f0;*/
+/*}*/
 
 .next-button {
     position: absolute;
@@ -366,7 +447,6 @@ hr {
     font-size: 18px;
     padding: 8px;
     margin-right: 0;
-    box-shadow: -10px 0 10px #f9f9f9;
 }
 
 .more-button {
@@ -499,10 +579,12 @@ hr {
 }
 
 .channel-name, .stats {
-    font-size: 14px;
+    font-size: 15px;
     color: #606060;
     margin-top: 2px;
 }
+
+
 
 .channel-name {
     margin-top: 8px;
@@ -525,7 +607,12 @@ hr {
     grid-column: 1 / -1;
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 4px solid #f0f0f0;
+    border-top: 3px solid #f0f0f0;
+}
+
+.shorts-section-placeholder.active{
+    border-top: 3px solid #3f3f3f;
+    transition: ease-in-out 250ms;
 }
 
 .shorts-icon {
@@ -542,4 +629,46 @@ hr {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    transition: ease-in-out 250ms;
+}
+
+
+/*Active dark mode*/
+
+body.active{
+    background-color: #0f0f0f;
+    color: #ffffff;
+    transition: background-color 250ms ease-in-out, color 300ms ease-in-out;
+}
+
+.channel-name.active, .stats.active{
+    color: #aaaaaa;
+}
+
+.header.active{
+    background-color: #0f0f0f;
+    border-bottom: 1px solid #0f0f0f;
+    transition: ease-in-out 250ms;
+}
+
+.sidebar.active{
+    background-color: #0f0f0f;
+    border-right: 1px solid #3f3f3f;
+    transition: ease-in-out 250ms;
+}
+
+.nav-title.active, .nav-title-icon.active, .nav-icon.active, .header-icon.active, .shorts-title.active {
+    color: #ffffff;
+    transition: ease-in-out 250ms;
+}
+
+.nav-active.active{
+    background-color: #272727;
+    color: #ffffff;
+    transition: ease-in-out 250ms;
+}
+
+.filter-bar.active{
+    background-color: #0f0f0f;
+    transition: ease-in-out 250ms;
 }
