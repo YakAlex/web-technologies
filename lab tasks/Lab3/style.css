@@ -81,11 +81,22 @@ hr.active{
 }
 
 .menu-icon {
-    font-size: 20px;
+    background-color: transparent;
     padding: 8px 10px;
     cursor: pointer;
     margin-right: 15px;
     color: #606060;
+    border-radius: 50%;
+}
+
+.menu-icon:hover{
+    background-color: #e5e5e5;
+    transition: ease-in-out 150ms;
+}
+
+.menu-icon.active:hover{
+    background-color: #606060;
+    transition: ease-in-out 150ms;
 }
 
 .logo {
@@ -657,7 +668,7 @@ body.active{
     transition: ease-in-out 250ms;
 }
 
-.nav-title.active, .nav-title-icon.active, .nav-icon.active, .header-icon.active, .shorts-title.active {
+.nav-title.active, .nav-title-icon.active, .nav-icon.active, .header-icon.active, .shorts-title.active, .menu-icon.active {
     color: #ffffff;
     transition: ease-in-out 250ms;
 }

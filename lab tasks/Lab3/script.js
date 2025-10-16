@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = document.querySelectorAll
         (
             "body, hr, .header, .sidebar, .nav-title, .nav-title-icon, .nav-active, .nav-icon, .nav-item," +
-            " .header-icon, .filter-bar, .shorts-title, .shorts-section-placeholder, .search-input, .search-button, .search-icon"
+            " .header-icon, .filter-bar, .shorts-title, .shorts-section-placeholder, .search-input, .search-button, .search-icon, .menu-icon"
         );
     const AllChannelInfo = document.querySelectorAll(".channel-name, .stats");
     const AllFilterButton = document.querySelectorAll(".filter-button");
