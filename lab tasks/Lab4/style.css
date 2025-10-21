@@ -1,0 +1,93 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+    height: 100vh;
+    display: flex;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+.weekly-plan{
+    width: 75%;
+    height: 90%;
+    margin: auto;
+    /*display: grid;*/
+    border: 3px solid black;
+}
+
+.header{
+    border-bottom: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    align-items: end;
+    column-gap: 0;
+    padding: 10px;
+}
+
+.header input{
+    border-bottom: 1px solid black;
+}
+
+.header-title{
+    font-size: 3rem;
+    font-weight: bold;
+    padding-right: 30px;
+    white-space: nowrap;
+}
+
+.criteria-title{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.criterias{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 10px;
+    font-size: 16px;
+    gap: 5px;
+    /*border: 1px solid black;*/
+}
+
+.goals-columns{
+    height: 90%;
+    width: 30%;
+    border-right: 2px solid black;
+}
+
+.section-title{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: bold;
+    align-items: flex-end;
+    padding: 5px 10px;
+}
+
+.goals{
+    display: grid;
+    padding-left: 10px;
+    row-gap: 10px;
+}
+
+.goal-title{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.list-item input{
+    border-bottom: 1px solid black;
+    font-size: 14px;
+}
