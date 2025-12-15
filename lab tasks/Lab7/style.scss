@@ -1,0 +1,118 @@
+$font-stack: 'Comfortaa', cursive, sans-serif;
+$color-bg-dark: #0f2027;
+$color-bg-light: #2c5364;
+$color-accent: #ff416c;
+$color-accent-grad: #ff4b2b;
+$glass-bg: rgba(255, 255, 255, 0.1);
+$glass-border: rgba(255, 255, 255, 0.2);
+$text-white: #ffffff;
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+
+  background: linear-gradient(to right, $color-bg-dark, #203a43, $color-bg-light);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.bg-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, $color-accent, transparent 70%);
+  top: 20%;
+  left: 30%;
+  opacity: 0.6;
+  filter: blur(80px);
+  z-index: 0;
+  animation: moveGlow 10s infinite alternate;
+}
+
+
+.ny-card {
+
+  background: $glass-bg;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid $glass-border;
+
+  width: 320px;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: $text-white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+
+  &__icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: float 3s ease-in-out infinite;
+  }
+
+  &__title {
+    margin: 0 0 15px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+
+  &__desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+  }
+
+
+  &__btn {
+    background: linear-gradient(45deg, $color-accent, $color-accent-grad);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-family: $font-stack;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(255, 65, 108, 0.6);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes moveGlow {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(100px, 50px); }
+}
